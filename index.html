@@ -1,216 +1,339 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Chaudhary Tiles & Stone | Gurugram</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chaudhary Tiles & Stone | Premium Marble in Gurugram</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+:root{
+--bg:#f4f6f9;
+--text:#222;
+--card:#ffffff;
+--primary:#00c3ff;
+}
+
+body.dark{
+--bg:#121212;
+--text:#ffffff;
+--card:#1e1e1e;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
 body{
-background:#f8f9fa;
-transition:0.4s;
+background:var(--bg);
+color:var(--text);
+transition:0.3s;
 }
 
-.dark-mode{
-background:#121212;
+/* Header */
+header{
+background:linear-gradient(135deg,#111,#333);
 color:white;
+padding:25px;
+text-align:center;
+animation:fadeDown 1s ease-in-out;
 }
 
+.toggle-btn{
+position:absolute;
+right:20px;
+top:25px;
+cursor:pointer;
+background:var(--primary);
+padding:8px 14px;
+border-radius:20px;
+color:white;
+border:none;
+}
+
+/* Navbar */
 nav{
 background:#000;
-color:white;
-padding:15px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
+text-align:center;
+padding:12px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
-}
-
-.toggle-btn{
-background:#25D366;
-border:none;
-padding:8px 12px;
-border-radius:5px;
-cursor:pointer;
-}
-
-.hero{
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
-background-size:cover;
-color:white;
-padding:120px 20px;
-text-align:center;
-}
-
-.section{
-padding:70px 20px;
-text-align:center;
-}
-
-.services{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-
-.card{
-background:white;
-padding:20px;
-width:250px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+margin:0 20px;
+font-weight:500;
 transition:0.3s;
 }
 
-.dark-mode .card{
-background:#1e1e1e;
-color:white;
+nav a:hover{
+color:var(--primary);
 }
 
-.card:hover{transform:scale(1.05);}
-
-.price-box{
-background:white;
-padding:20px;
-width:280px;
-margin:15px auto;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.dark-mode .price-box{
-background:#1e1e1e;
-}
-
-.faq{
-max-width:700px;
-margin:auto;
-text-align:left;
-}
-
-.faq-item{
-background:white;
-padding:15px;
-margin-bottom:15px;
-border-radius:8px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-
-.dark-mode .faq-item{
-background:#1e1e1e;
-}
-
-footer{
-background:#000;
+/* Hero */
+.hero{
+background:url('https://images.unsplash.com/photo-1582582494700-f8ce0b6e1a5c?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-position:center;
+height:450px;
+display:flex;
+align-items:center;
+justify-content:center;
 color:white;
 text-align:center;
-padding:20px;
+position:relative;
 }
 
-.float-btn{
+.hero::after{
+content:'';
+position:absolute;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.hero h2{
+position:relative;
+font-size:36px;
+animation:fadeUp 1.5s ease-in-out;
+}
+
+/* Section */
+.section{
+padding:60px 20px;
+text-align:center;
+}
+
+/* Products */
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.card{
+background:var(--card);
+width:280px;
+padding:15px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transition:0.4s;
+animation:fadeUp 1.5s ease-in-out;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+border-radius:12px;
+}
+
+.price{
+color:green;
+font-weight:bold;
+margin-top:5px;
+}
+
+/* Reviews */
+.review-box{
+background:var(--card);
+padding:20px;
+margin:15px auto;
+max-width:600px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Contact */
+form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input, textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+padding:12px;
+border:none;
+background:var(--primary);
+color:white;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+iframe{
+width:100%;
+height:350px;
+border-radius:12px;
+margin-top:20px;
+}
+
+/* Floating WhatsApp */
+.whatsapp{
 position:fixed;
-right:20px;
 bottom:20px;
+right:20px;
 background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
+font-size:22px;
 text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
-.call-btn{
-position:fixed;
-left:20px;
-bottom:20px;
-background:#007bff;
+/* Footer */
+footer{
+background:#111;
 color:white;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* Animations */
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeDown{
+from{opacity:0;transform:translateY(-40px);}
+to{opacity:1;transform:translateY(0);}
 }
 
 @media(max-width:768px){
-.services{flex-direction:column;align-items:center;}
+.products{
+flex-direction:column;
+align-items:center;
+}
 }
 </style>
 </head>
 
 <body>
 
+<header>
+<h1>Chaudhary Tiles & Stone</h1>
+<p>Premium Tiles & Natural Stones in Gurugram</p>
+<button class="toggle-btn" onclick="toggleMode()">🌙 Mode</button>
+</header>
+
 <nav>
-<h2>Chaudhary Tiles & Stone</h2>
-<div>
 <a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#pricing">Pricing</a>
-<a href="#faq">FAQ</a>
-<button class="toggle-btn" onclick="toggleMode()">🌙</button>
-</div>
+<a href="#products">Products</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <div class="hero">
-<h1>Premium Tiles & Natural Stones in Gurugram</h1>
-<p>Best Quality | Best Price | Trusted Supplier</p>
+<h2>Luxury Marble Collection at Best Prices</h2>
 </div>
 
-<div class="section" id="services">
-<h2>Our Services</h2>
-<div class="services">
-<div class="card">Wall Tiles</div>
-<div class="card">Floor Tiles</div>
-<div class="card">Marble</div>
-<div class="card">Granite</div>
-<div class="card">Kota Stone</div>
-<div class="card">Sandstone</div>
-<div class="card">Designer Stone</div>
+<!-- Products -->
+<div class="section" id="products">
+<h2>Our Products</h2>
+<br>
+
+<div class="products">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=80">
+<h3>Italian Marble</h3>
+<p class="price">₹250 / sq.ft</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80">
+<h3>Makrana Marble</h3>
+<p class="price">₹180 / sq.ft</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1598300054513-8c02b77e1b68?auto=format&fit=crop&w=800&q=80">
+<h3>Granite Stone</h3>
+<p class="price">₹150 / sq.ft</p>
+</div>
 </div>
 </div>
 
-<div class="section" id="pricing">
-<h2>Starting Price</h2>
-<div class="price-box">Tiles Starting From ₹25/sq.ft</div>
-<div class="price-box">Marble Starting From ₹60/sq.ft</div>
-<div class="price-box">Granite Starting From ₹70/sq.ft</div>
+<!-- Reviews -->
+<div class="section" id="reviews">
+<h2>Customer Reviews ⭐</h2>
+
+<div class="review-box">
+<p>"Best quality tiles and marble in Gurugram. Highly recommended!"</p>
+<b>- Rahul Sharma</b>
 </div>
 
-<div class="section" id="faq">
-<h2>Frequently Asked Questions</h2>
-<div class="faq">
-<div class="faq-item">
-<b>Do you provide home delivery?</b><br>
-Yes, delivery available in Gurugram.
+<div class="review-box">
+<p>"Affordable price and fast delivery."</p>
+<b>- Amit Verma</b>
 </div>
-<div class="faq-item">
-<b>Do you provide installation?</b><br>
-Yes, professional installation available.
+
+<div class="review-box">
+<p>"Very professional and trusted supplier."</p>
+<b>- Sandeep Kumar</b>
 </div>
-<div class="faq-item">
-<b>How to get quotation?</b><br>
-Contact us on WhatsApp for quick quotation.
+
 </div>
-</div>
+
+<!-- Contact -->
+<div class="section" id="contact">
+<h2>Contact Us</h2>
+<p>📞 7827692023</p>
+<p>📍 Gurugram, Haryana</p>
+
+<form onsubmit="sendToWhatsApp(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Your Phone" required>
+<textarea id="message" placeholder="Your Requirement" required></textarea>
+<button type="submit">Send Enquiry</button>
+</form>
+
+<iframe src="https://www.google.com/maps?q=Gurugram,Haryana&output=embed"></iframe>
+
 </div>
 
 <footer>
-© 2026 Chaudhary Tiles & Stone | Gurugram
+© 2026 Chaudhary Tiles & Stone | All Rights Reserved
 </footer>
 
-<a class="float-btn" href="https://wa.me/917827692023">💬</a>
-<a class="call-btn" href="tel:7827692023">📞</a>
+<a href="https://wa.me/917827692023" class="whatsapp" target="_blank">💬</a>
 
 <script>
+function sendToWhatsApp(event){
+event.preventDefault();
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var message=document.getElementById("message").value;
+
+var url="https://wa.me/917827692023?text="
++"New Enquiry:%0a"
++"Name: "+name+"%0a"
++"Phone: "+phone+"%0a"
++"Requirement: "+message;
+
+window.open(url,"_blank");
+}
+
 function toggleMode(){
-document.body.classList.toggle("dark-mode");
+document.body.classList.toggle("dark");
 }
 </script>
 
