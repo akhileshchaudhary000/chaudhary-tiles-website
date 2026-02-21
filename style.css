@@ -1,55 +1,229 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
-    text-align: center;
-    transition: 0.3s;
+/* ===== RESET ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.dark {
-    background: #111;
-    color: white;
+/* ===== BODY ===== */
+body{
+font-family: 'Segoe UI', sans-serif;
+background:#f4f6f9;
+color:#222;
+text-align:center;
+transition:0.4s;
 }
 
-header {
-    background: #111;
-    color: white;
-    padding: 30px 20px;
+/* ===== DARK MODE ===== */
+.dark{
+background:#121212;
+color:white;
 }
 
-.logo {
-    width: 220px;
-    margin: 0 auto 15px;
-    display: block;
+.dark header{
+background:#000;
 }
 
-.mode-toggle {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    padding: 8px 12px;
-    border: none;
-    cursor: pointer;
+.dark table th{
+background:#000;
 }
 
-.calculator input {
-    padding: 8px;
-    margin: 5px;
+.dark .review-box{
+background:#1e1e1e;
+color:white;
 }
 
-.calculator button {
-    padding: 8px 12px;
-    cursor: pointer;
+.dark footer{
+background:#000;
 }
 
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    font-size: 24px;
-    padding: 12px 15px;
-    border-radius: 50%;
-    text-decoration: none;
+/* ===== HEADER ===== */
+header{
+background:linear-gradient(135deg,#111,#333);
+color:white;
+padding:40px 20px;
+}
+
+.logo{
+width:220px;
+margin-bottom:15px;
+}
+
+header h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+header p{
+opacity:0.8;
+}
+
+/* ===== DARK MODE BUTTON ===== */
+.mode-toggle{
+position:fixed;
+top:15px;
+right:15px;
+background:#222;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* ===== PRICE TABLE ===== */
+.price-section{
+padding:50px 20px;
+}
+
+table{
+width:90%;
+max-width:900px;
+margin:auto;
+border-collapse:collapse;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+border-radius:8px;
+overflow:hidden;
+}
+
+th, td{
+padding:15px;
+border-bottom:1px solid #eee;
+}
+
+th{
+background:#222;
+color:white;
+font-weight:500;
+}
+
+tr:hover{
+background:#f1f1f1;
+}
+
+/* ===== GALLERY ===== */
+.gallery{
+padding:50px 20px;
+}
+
+.gallery-grid{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.gallery-grid img{
+width:300px;
+height:200px;
+object-fit:cover;
+border-radius:12px;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/* ===== REVIEWS ===== */
+.reviews{
+padding:50px 20px;
+background:#f9f9f9;
+}
+
+.review-box{
+margin:20px auto;
+max-width:500px;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* ===== BOOKING FORM ===== */
+.booking{
+padding:50px 20px;
+}
+
+.booking input,
+.booking textarea{
+display:block;
+margin:12px auto;
+padding:12px;
+width:320px;
+max-width:90%;
+border:1px solid #ddd;
+border-radius:6px;
+font-size:14px;
+}
+
+.booking textarea{
+height:100px;
+resize:none;
+}
+
+.booking button{
+background:#222;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.booking button:hover{
+background:#444;
+}
+
+/* ===== MAP ===== */
+.map{
+padding:50px 20px;
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:24px;
+padding:14px 18px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+/* ===== FOOTER ===== */
+footer{
+background:#111;
+color:white;
+padding:20px;
+margin-top:30px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+
+header h1{
+font-size:24px;
+}
+
+.gallery-grid img{
+width:90%;
+height:auto;
+}
+
+table{
+width:95%;
+}
+
 }
