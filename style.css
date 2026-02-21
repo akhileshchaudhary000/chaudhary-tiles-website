@@ -162,3 +162,13 @@ font-weight:bold;
 font-size:16px;
 color:white;
 }
+body{font-family:Arial;background:#111;color:white;margin:0}
+.container{width:90%;margin:auto;padding:20px}
+h1{color:gold}
+input,select{padding:8px;width:100%;margin-bottom:10px}
+button{background:gold;border:none;padding:8px 15px;cursor:pointer}
+table{width:100%;border-collapse:collapse;margin-top:20px}
+table,th,td{border:1px solid #333;padding:8px}
+.nav{background:black;padding:15px}
+.nav a{color:gold;margin-right:15px;text-decoration:none}
+.card{background:#222;padding:15px;margin-bottom:20px}
