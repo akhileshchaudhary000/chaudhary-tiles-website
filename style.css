@@ -425,3 +425,49 @@ margin-top:10px;
 font-weight:600;
 color:#fff;
 }
+.contact-container{
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+justify-content:space-between;
+padding:20px;
+}
+
+.contact-container form{
+flex:1;
+min-width:280px;
+}
+
+.contact-info{
+flex:1;
+min-width:280px;
+background:#1c1c1c;
+padding:25px;
+border-radius:15px;
+box-shadow:0 0 20px gold;
+}
+
+.contact-info h3{
+margin-bottom:15px;
+color:gold;
+}
+
+.contact-info p{
+margin-bottom:10px;
+font-weight:500;
+}
+
+.contact-info a{
+color:gold;
+text-decoration:none;
+}
+
+.contact-info a:hover{
+text-decoration:underline;
+}
+
+/* Light mode support */
+.light-mode .contact-info{
+background:#f4f4f4;
+color:black;
+}
