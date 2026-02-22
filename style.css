@@ -70,13 +70,17 @@ border-radius:5px;
 
 /* ================= PREMIUM HERO ================= */
 
+/* ================= FULL LOGO HERO ================= */
+
 .hero{
-position:relative;
-background:radial-gradient(circle at center, #1a1a1a 0%, #000 70%);
+background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+url('logo.png');
+background-size:cover;        /* 👈 Poora screen fill karega */
+background-position:center;
+background-repeat:no-repeat;
 color:white;
 text-align:center;
-padding:180px 20px 120px;
-overflow:hidden;
+padding:200px 20px;
 }
 
 .hero::before{
