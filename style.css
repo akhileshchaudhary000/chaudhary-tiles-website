@@ -12,6 +12,7 @@ body{
     color:#111;
     transition:0.3s;
     line-height:1.6;
+    padding-top:80px;   /* Fixed header space */
 }
 
 a{
@@ -37,7 +38,8 @@ button{
 header, .navbar{
     background:#111;
     color:#fff;
-    padding:15px 50px;
+    height:80px;
+    padding:0 50px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -47,7 +49,15 @@ header, .navbar{
     z-index:1000;
 }
 
-header .logo-text, .navbar .logo-text{
+/* Logo Image */
+.logo img{
+    height:60px;
+    width:auto;
+    display:block;
+}
+
+/* Logo Text */
+.logo-text{
     font-size:22px;
     font-weight:bold;
     color:gold;
@@ -55,7 +65,7 @@ header .logo-text, .navbar .logo-text{
 
 nav a{
     color:white;
-    margin-left:20px;
+    margin-left:25px;
     font-size:16px;
     transition:0.3s;
 }
@@ -115,7 +125,6 @@ nav a:hover{
 .services h2{
     font-size:36px;
     margin-bottom:50px;
-    color:#111;
 }
 
 .service-box{
@@ -165,7 +174,6 @@ nav a:hover{
 .gallery h2{
     font-size:36px;
     margin-bottom:50px;
-    color:#111;
 }
 
 .gallery-grid{
@@ -198,7 +206,6 @@ nav a:hover{
 .contact h2{
     font-size:36px;
     margin-bottom:20px;
-    color:#111;
 }
 
 .contact p{
@@ -284,7 +291,12 @@ footer a:hover{
 @media(max-width:768px){
     header, .navbar{
         flex-direction:column;
+        height:auto;
         padding:15px 20px;
+    }
+
+    body{
+        padding-top:120px;
     }
 
     nav{
