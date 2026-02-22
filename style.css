@@ -78,8 +78,8 @@ padding:120px 20px;
 }
 
 .hero-logo{
-width:160px;   
-max-width:70%;
+width:220px;   
+max-width:80%;
 margin-bottom:20px;
 }
 
@@ -267,4 +267,9 @@ width:95%;
 .booking-form input[type="date"],
 .booking-form input[type="time"]{
 cursor:pointer;
+}
+@media(max-width:768px){
+.hero-logo{
+width:170px;
+}
 }
