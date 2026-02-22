@@ -81,11 +81,11 @@ text-align:center;
 padding:150px 20px;
 }
 
-.hero-logo{
-width:280px;
-max-width:85%;
-margin-bottom:30px;
-}
+.hero{
+background:#000;
+color:white;
+text-align:center;
+padding:150px 20px;
 }
 
 .gold-btn{
