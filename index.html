@@ -9,41 +9,43 @@
 <meta name="description" content="Premium Tile Contractor in Gurugram. Since 2005 | 21+ Years Experience | 500+ Projects Completed">
 
 <link rel="stylesheet" href="style.css">
-
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
   <div class="header-container">
-    <img src="logo.png" class="header-logo" alt="Logo">
-    <h1>Chaudhary Tiles & Stone</h1>
+    <div class="logo-box">
+      <img src="logo.png" class="header-logo">
+      <h1>Chaudhary Tiles & Stone</h1>
+    </div>
+
     <nav>
       <a href="#about">About</a>
       <a href="#services">Rates</a>
       <a href="#gallery">Work</a>
+      <a href="#calculator">Calculator</a>
       <a href="#reviews">Reviews</a>
-      <a href="#booking">Contact</a>
+      <a href="#contact">Contact</a>
     </nav>
+
+    <button class="toggle-btn" onclick="toggleMode()">🌙</button>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <h2>Professional Tile & Stone Installation</h2>
-    <p>Serving Gurugram with Quality, Trust & Perfection</p>
-    <a href="#booking" class="gold-btn">Get Free Estimate</a>
+  <img src="logo.png" class="hero-logo">
+  <h2>Professional Tile & Stone Installation</h2>
+  <p>Serving Gurugram with Quality, Trust & Perfection</p>
+  <a href="#contact" class="gold-btn">Get Free Estimate</a>
 
-    <div class="badge">
-      🏆 Since 2005 | 21+ Years Experience | 500+ Projects Completed
-    </div>
+  <div class="badge">
+    🏆 Since 2005 | 21+ Years Experience | 500+ Projects Completed
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="fade-in">
+<section id="about">
   <h2>About Us</h2>
   <p>
     Established in 2005, we provide premium tile fitting, marble flooring,
@@ -52,101 +54,91 @@
   </p>
 </section>
 
-<!-- PRICING -->
-<section id="services" class="fade-in">
+<section id="services">
   <h2>Our Rates</h2>
   <div class="pricing-container">
-
-    <div class="price-card">
-      <h3>Tile Fitting</h3>
-      <p class="price">₹45/sq.ft</p>
-    </div>
-
-    <div class="price-card">
-      <h3>Kitchen Stone</h3>
-      <p class="price">₹200/sq.ft</p>
-    </div>
-
-    <div class="price-card">
-      <h3>Window Stone</h3>
-      <p class="price">₹250/sq.ft</p>
-    </div>
-
-    <div class="price-card">
-      <h3>Waterproofing</h3>
-      <p class="price">₹80/sq.ft</p>
-    </div>
-
-    <div class="price-card">
-      <h3>Epoxy Work</h3>
-      <p class="price">₹20/sq.ft</p>
-    </div>
-
-    <div class="price-card highlight">
-      <h3>Bathroom Plumbing</h3>
-      <p class="price">₹15,000</p>
-    </div>
-
+    <div class="price-card"><h3>Tile Fitting</h3><p class="price">₹45/sq.ft</p></div>
+    <div class="price-card"><h3>Kitchen Stone</h3><p class="price">₹200/sq.ft</p></div>
+    <div class="price-card"><h3>Window Stone</h3><p class="price">₹250/sq.ft</p></div>
+    <div class="price-card"><h3>Waterproofing</h3><p class="price">₹80/sq.ft</p></div>
+    <div class="price-card"><h3>Epoxy Work</h3><p class="price">₹20/sq.ft</p></div>
+    <div class="price-card highlight"><h3>Bathroom Plumbing</h3><p class="price">₹15,000</p></div>
   </div>
 </section>
 
-<!-- GALLERY SLIDER -->
-<section id="gallery" class="fade-in">
+<section id="gallery">
   <h2>Our Work</h2>
-  <div class="slider">
-    <div class="slides">
-      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d">
-      <img src="https://images.unsplash.com/photo-1598300053653-5d93fcd3c3c5">
-      <img src="https://images.unsplash.com/photo-1588854337118-6c3e8a3e2a8a">
-    </div>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d">
+    <img src="https://images.unsplash.com/photo-1598300053653-5d93fcd3c3c5">
+    <img src="https://images.unsplash.com/photo-1588854337118-6c3e8a3e2a8a">
+    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115">
+    <img src="https://images.unsplash.com/photo-1600607687644-c7a37f42e8f8">
   </div>
 </section>
 
-<!-- REVIEWS -->
-<section id="reviews" class="fade-in">
+<section id="calculator">
+  <h2>Tile Area Calculator</h2>
+  <div class="calc-box">
+    <input type="number" id="length" placeholder="Length (ft)">
+    <input type="number" id="width" placeholder="Width (ft)">
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+  </div>
+</section>
+
+<section id="reviews">
   <h2>Google Reviews ⭐⭐⭐⭐⭐</h2>
 
   <div class="review-card">
-    <p>"Excellent tile fitting work. Clean and professional."</p>
-    <h4>- Rajesh Sharma (Tile Work)</h4>
+    ⭐⭐⭐⭐⭐
+    <p>"Excellent tile fitting and finishing work."</p>
+    <h4>- Rajesh Sharma</h4>
   </div>
 
   <div class="review-card">
-    <p>"Very experienced team. Highly recommended."</p>
-    <h4>- Amit Verma (Marble Flooring)</h4>
+    ⭐⭐⭐⭐⭐
+    <p>"Best contractor in Gurugram. Highly recommended."</p>
+    <h4>- Amit Verma</h4>
   </div>
 
+  <div class="review-card">
+    ⭐⭐⭐⭐⭐
+    <p>"Professional team and timely completion."</p>
+    <h4>- Sandeep Kumar</h4>
+  </div>
 </section>
 
-<!-- BOOKING -->
-<section id="booking" class="fade-in">
-  <h2>Book Free Site Visit</h2>
-  <div class="booking-form">
-    <input type="text" id="name" placeholder="Full Name">
-    <input type="tel" id="phone" placeholder="Mobile Number">
-    <textarea id="details" placeholder="Work Details"></textarea>
-    <button onclick="sendWhatsApp()">Book Now</button>
-  </div>
+<section id="contact">
+  <h2>Our Location</h2>
+
+  <iframe 
+  src="https://www.google.com/maps?q=Sector+28+Gurugram&output=embed"
+  width="100%" height="300" style="border:0;"></iframe>
+
+  <p class="contact-info">
+    📍 Sector 28, Gurugram <br>
+    📞 +91 7827692023
+  </p>
 </section>
 
 <footer>
-  <p>© 2026 Chaudhary Tiles & Stone | Since 2005 | Gurugram</p>
+  <p>© 2026 Chaudhary Tiles & Stone | Sector 28 Gurugram</p>
 </footer>
 
 <a href="tel:917827692023" class="sticky-call">📞 Call Now</a>
 <a href="https://wa.me/917827692023" class="whatsapp" target="_blank">💬</a>
 
 <script>
-function sendWhatsApp(){
-  let name = document.getElementById("name").value;
-  let phone = document.getElementById("phone").value;
-  let details = document.getElementById("details").value;
+function calculate(){
+let l=document.getElementById("length").value;
+let w=document.getElementById("width").value;
+let area=l*w;
+document.getElementById("result").innerText="Total Area: "+area+" sq.ft";
+}
 
-  let message = "New Booking:%0AName: " + name +
-                "%0APhone: " + phone +
-                "%0AWork: " + details;
-
-  window.open("https://wa.me/917827692023?text=" + message, "_blank");
+function toggleMode(){
+document.body.classList.toggle("dark-mode");
 }
 </script>
 
